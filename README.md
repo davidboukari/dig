@@ -29,7 +29,7 @@ davidtheteacher.com.	900	IN	SOA	ns-1524.awsdns-62.org. awsdns-hostmaster.amazon.
 ;; MSG SIZE  rcvd: 278
 ```
 
-## Revert
+## Domain Reverse
 ```bash
 dig -x  davidtheteacher.com
 
