@@ -28,3 +28,27 @@ davidtheteacher.com.	900	IN	SOA	ns-1524.awsdns-62.org. awsdns-hostmaster.amazon.
 ;; WHEN: Mon Jan 11 21:16:31 CET 2021
 ;; MSG SIZE  rcvd: 278
 ```
+
+## Revert
+```bash
+dig -x  davidtheteacher.com
+
+; <<>> DiG 9.10.6 <<>> -x davidtheteacher.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 58871
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1472
+;; QUESTION SECTION:
+;com.davidtheteacher.in-addr.arpa. IN	PTR
+
+;; AUTHORITY SECTION:
+in-addr.arpa.		393	IN	SOA	b.in-addr-servers.arpa. nstld.iana.org. 2020121766 1800 900 604800 3600
+
+;; Query time: 366 msec
+;; SERVER: 192.168.0.254#53(192.168.0.254)
+;; WHEN: Mon Jan 11 21:20:06 CET 2021
+;; MSG SIZE  rcvd: 129
+```
